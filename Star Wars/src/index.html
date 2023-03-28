@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="./Styles/index.css">
+    <link rel="stylesheet" href="./Styles/video.css">
+    <link rel="website icon" href="./Icono logo/Mi proyecto.png">
+    <style>
+        .musica {
+            background: #000;
+            float: left;
+            height: 1px;
+            margin: 20px 1px 0 0;
+            position: relative;
+            transition: all linear 300ms;
+            width: 2px;
+            -webkit-box-reflect: below -1px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.35, transparent), to(rgb(36, 4, 4)));
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="head">
+
+        <div class="logo">
+            <a href="index.html"> <img src="./Icono logo/Mi proyecto.png" alt="iccono" width="45px" height="45px">
+                Fonuniv</a>
+        </div>
+
+        <nav class="navbar">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+            <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+            <div class="play-stop-mobile hidden-sm hidden-md hidden-lg">
+
+                <a href="#" id="play" onclick="togglePlay()">
+                    <i class="fa fa-play-circle-o" aria-hidden="true"></i>
+                </a>
+                <a href="#" id="pause" onclick="togglePlay()" style="display: none;">
+                    <i class="fa fa-stop-circle-o" aria-hidden="true"></i>
+                </a>
+            </div>
+            <div class="musica"></div>
+            <div class="musica"></div>
+            <div class="musica"></div>
+            <div class="musica"></div>
+            <div class="musica"></div>
+            <div class="musica"></div>
+            <div class="musica"></div>
+            <div class="musica"></div>
+            <div class="musica"></div>
+            <div class="musica"></div>
+            <div class="musica"></div>
+            <div class="musica"></div>
+            <div class="musica"></div>
+            <div class="musica"></div>
+            <div class="musica"></div>
+            <div class="musica"></div>
+            <div class="musica"></div>
+            <div class="musica"></div>
+            <div class="musica"></div>
+            <div class="musica"></div>
+            <div class="musica"></div>
+            <div class="musica"></div>
+            <div class="musica"></div>
+            <div class="musica"></div>
+            <div class="musica"></div>
+            <div class="musica"></div>
+            <div class="musica"></div>
+            <div class="musica"></div>
+            <div class="musica"></div>
+            <div class="musica"></div>
+            <div class="musica"></div>
+            <div class="musica"></div>
+            <div class="musica"></div>
+            <div class="musica"></div>
+            <script>
+                var procesar = true;
+                var elem = $('.musica');
+                var count = elem.length;
+
+                var loop = function () {
+                    setTimeout(function () {
+                        if (procesar) {
+                            elem.each(function () {
+                                var $this = $(this);
+                                var height = (Math.random() * 30) + 1;
+                                $this.css({
+                                    'background': 'linear-gradient(to top, rgba(61, 175, 5,' + (.75 - ($this.index() / count) / 2) + '),yellow)',
+                                    'bottom': height,
+                                    'height': height
+                                });
+                            });
+                            loop();
+                        }
+                    }, 300);
+                }
+                loop();
+
+                $('#play').on('click', function (event) {
+                    console.log('play click clicked');
+                    $('#pause').show();
+                    $('#play').hide();
+                    procesar = true;
+                    loop();
+                });
+
+                $('#pause').on('click', function (event) {
+                    $('#pause').hide();
+                    $('#play').show();
+                    procesar = false;
+                });
+            </script>
+            <a href="index.html">HOME</a>
+            <a href="./about/about.html">ABOUT</a>
+            <a href="./Contact/contact.html">CONTACT</a>
+        </nav>
+    </div>
+
+    <header class="content header">
+        <br><br><br>
+        <div style="background-color: rgba(0, 0, 0, 0.397);">
+            <video src="./Video/Mi video.mp4" autoplay="true" muted="false" loop="true" poster="intro"></video>
+            <audio id="audio" src="./Musica/musica definitiva.mp3" autoplay="true" loop="true"></audio>
+        </div>
+
+    </header>
+    <section class="content sau">
+
+
+        <div class="box-container">
+
+            <a href="./informacion/informacion.html" style="text-decoration: none; color: #ffff;">
+                <div class="box">
+                    <br><br>
+                    <h3>Informacion</h3>
+                    <br>
+                    <p>Toda la informacion sobre:<br><br>El despertar de Zephyr</p>
+                    <p></p>
+                </div>
+            </a>
+            <a href="./Multimedia/multimedia.html" style="text-decoration: none; color: #ffff;">
+                <div class="box">
+                    <br><br>
+                    <h3>Multimedia</h3>
+                    <br><br>
+                    <p>Peliculas, Series y musica de Star Wars</p>
+                </div>
+            </a>
+            <a href="https://www.fnac.es/SearchResult/ResultList.aspx?Search=star+wars&sft=1&sa=1" style="text-decoration: none; color: #ffff;">
+                <div class="box">
+                    <br><br>
+                    <h3>Merchandaising
+                    </h3>
+                    <br><br>
+                    <p>Ropa, sudaderas, pantalones, etc...</p>
+                </div>
+            </a>
+            <a href="https://vandal.elespanol.com/noticias/noticias-sobre-star-wars"
+                style="text-decoration: none; color: #ffff;">
+                <div class="box">
+                    <br><br>
+                    <h3>Noticias</h3>
+                    <br>
+                    <p>Noricias, eventos, etc... Sobre Star Wars</p>
+                    <p></p>
+                </div>
+            </a>
+            <a href="https://los40.com/los40/2022/05/04/bigbang/1651648095_518643.html"
+                style="text-decoration: none; color: #ffff;">
+                <div class="box">
+                    <br><br>
+                    <h3>Memes</h3>
+                    <br>
+                    <p>Unos cuantos memes sobre Star Wars</p>
+                    <p></p>
+                </div>
+            </a>
+            <a href="https://culturainquieta.com/es/cine/item/10801-los-actores-y-actrices-de-star-wars-antes-y-ahora.html"
+                style="text-decoration: none; color: #ffff;">
+                <div class="box">
+                    <br><br>
+                    <h3>Informacion sobre los actores y actrices <br>Star Wars</h3>
+                    <br>
+                    <p>Antes y despues del universo de Star Wars</p>
+                    <p></p>
+                </div>
+            </a>
+        </div>
+
+    </section>
+    <p style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">By entering the site, you agree to our use of cookies. For more info check our <a
+        style="text-decoration: none; color: rgb(230, 134, 88);"
+                href="./cookies/cookies.html">Privacy Policy</a>.</p>
+    </div>
+    <script src="./Script/app.js"></script>
+</body>
+
+</html>
