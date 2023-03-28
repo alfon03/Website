@@ -1,0 +1,60 @@
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulario de registro</title>
+
+  <link rel="stylesheet" type="text/css" href="../Styles/formulario.css">
+  <link rel="website icon" href="../Icono logo/Mi proyecto.png">
+  </head>
+
+
+<body>  
+  
+
+  <div class="contact_form">
+
+    <div class="formulario">      
+      <h1>Formulario de registro</h1>
+        <h3>Escríbenos y en breve los pondremos en contacto contigo</h3>
+
+
+          <form action="https://iesjacaranda.es/lmsgi/resultado.php" method="post">       
+
+            
+                <p>
+                  <label for="nombre" class="colocar_nombre">Nombre
+                    <span class="obligatorio">*</span>
+                  </label>
+                    <input type="text" name="introducir_nombre" id="nombre" required="obligatorio" placeholder="Escribe tu nombre">
+                </p>
+              
+                <p>
+                  <label for="email" class="colocar_email">Email
+                    <span class="obligatorio">*</span>
+                  </label>
+                    <input type="email" name="introducir_email" id="email" required="obligatorio" placeholder="Escribe tu Email">
+                </p>
+            
+                <p>
+                  <label for="telefone" class="colocar_telefono">Teléfono
+                  </label>
+                    <input type="tel" name="introducir_telefono" id="telefono" placeholder="Escribe tu teléfono">
+                </p>    
+                            
+               <button type="submit" name="enviar_formulario" id="enviar"><p>Enviar</p></button>
+
+                <p class="aviso">
+                  <span class="obligatorio"> * </span>los campos son obligatorios.
+                </p>
+                <br>        
+                <p  align="left"><input name="Si_SUBCRIBIRSE" type="checkbox" /></p>Si,acepto los t&eacute;rminos y quiero subcibirme
+
+                <br />
+                
+                <p align="left"><input  name="NO_SUBCRIBIRSE" type="checkbox" /></p>Si,acepto los t&eacute;rminos y no quiero subcibirme
+          </form>
+    </div>  
+  </div>
+
+</body>
+</html>
